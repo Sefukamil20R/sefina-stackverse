@@ -7,17 +7,9 @@ import { useState } from "react"
 const experiences = [
   {
     company: "Eskalate",
-    role: "Software Engineer Intern",
+    role: "Software Engineer",
     description:
-      "Contributed to the development of an e-commerce mobile application while learning clean architecture principles and collaborative software practices. Gained hands-on experience in scalable mobile design and team-based agile workflows.",
-    icon: Building2,
-    certificateUrl: null,
-  },
-  {
-    company: "Safaricom Telecommunications Ethiopia PLC",
-    role: "Mobile Application Engineer",
-    description:
-      "Worked on the Commercial Trade App (CT App), implementing new features, refactoring existing modules, and collaborating with teams across fintech environments. Enhanced performance and maintainability across multiple flavors and environments.",
+      "Contributed to the end-to-end development of an e-commerce mobile application, applying clean architecture principles and effective collaboration within a cross-functional team. Gained practical experience in building scalable, user-friendly mobile interfaces while following agile workflows and best practices in modern software development.",
     icon: Building2,
     certificateUrl: null,
   },
@@ -28,14 +20,6 @@ const experiences = [
       "Built and integrated responsive front-end interfaces with RESTful APIs, ensuring seamless data flow and improved user interactivity. Focused on crafting clean, maintainable UI components using modern frameworks and tools.",
     icon: Building2,
     certificateUrl: "/Intertech_Front.pdf",
-  },
-  {
-    company: "Gebeya Inc",
-    role: "Mobile Application Developer",
-    description:
-      "Built the MedaCare healthcare app from the ground up, focusing on virtual consultation features, AI chat, and smart recommendation systems. Contributed to architecture and feature integration for a seamless patient experience.",
-    icon: Briefcase,
-    certificateUrl: "/Gebeya.jpg",
   },
   {
     company: "Ethioware - EdTech Initiative",

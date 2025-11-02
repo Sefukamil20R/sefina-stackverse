@@ -29,7 +29,7 @@ const itemVariants: any = {
 export default function Resume() {
   return (
     <motion.section
-      className="w-full min-h-screen flex items-center justify-center bg-[#282830] px-4 py-20"
+      className="w-full flex items-center justify-center bg-[#282830] px-4 py-20"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
@@ -49,7 +49,7 @@ export default function Resume() {
         {/* Download Resume Button */}
         <motion.div variants={itemVariants}>
           <a
-            href="/Sefina-Kamile-Resume _F.pdf"
+            href="/Sefina-Kamile-Abrar-Resume-F.pdf"
             download
             className="inline-flex items-center gap-3 px-8 py-4 bg-[#bb852b] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-[#bb852b]/50 group relative overflow-hidden"
           >

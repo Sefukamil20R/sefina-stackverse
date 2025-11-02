@@ -82,15 +82,9 @@ export default function Contact() {
 
   return (
     <section id="contact" className="bg-[#282830] py-12 px-4 sm:px-6 lg:px-8">
-      <motion.div
-        className="max-w-2xl mx-auto"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
+      <div className="max-w-2xl mx-auto">
         {/* Section Header */}
-        <motion.div className="text-center mb-12" variants={itemVariants}>
+        <motion.div className="text-center mb-12" variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <h2 className="text-5xl sm:text-6xl font-bold text-white mb-4">
             Let's <span className="text-[#bb852b]">Connect</span>
           </h2>
@@ -105,6 +99,9 @@ export default function Contact() {
           onSubmit={handleSubmit}
           className="bg-[#373543] rounded-2xl p-8 sm:p-10 shadow-2xl backdrop-blur-sm border border-[#bb852b]/10"
           variants={itemVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           {/* Honeypot field to help Formspree detect spam without showing reCAPTCHA */}
           <input type="text" name="_gotcha" style={{ display: 'none' }} />
@@ -204,14 +201,14 @@ export default function Contact() {
         </motion.form>
 
         {/* Divider */}
-        <motion.div className="my-12 flex items-center gap-4" variants={itemVariants}>
+        <motion.div className="my-12 flex items-center gap-4" variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#bb852b]/30 to-transparent" />
           <span className="text-[#a0a0a0] text-sm">or reach out directly</span>
           <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#bb852b]/30 to-transparent" />
         </motion.div>
 
         {/* Footer Contact Info */}
-        <motion.div className="flex items-center justify-center gap-8" variants={itemVariants}>
+        <motion.div className="flex items-center justify-center gap-8" variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {/* Phone Icon */}
           <motion.a
             href="tel:+251987161875"
@@ -270,7 +267,7 @@ export default function Contact() {
             </span>
           </motion.a>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   )
 }
