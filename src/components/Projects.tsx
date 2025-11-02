@@ -47,7 +47,7 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    name: "CryptoSentinel",
+    name: "ChainGuard",
     description:
       "Blockchain-based transaction monitoring platform for fintech companies to track and verify cryptocurrency transactions with real-time analytics",
     mockupImage: "/Screenshoot/chainGuard.jpg",
@@ -63,7 +63,7 @@ const projects: Project[] = [
         HD
       </div>,
     ],
-    githubLink: "https://github.com/Sefukamil20R/CryptoSentinel",
+    githubLink: "https://github.com/Sefukamil20R/ChainGuard",
   },
   {
     id: 3,
