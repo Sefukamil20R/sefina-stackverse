@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import HeroRightSide from "./HeroRightSide";
+import { SiNextdotjs, SiNodedotjs, SiOpenai, SiReact } from "react-icons/si";
 
 const Hero = () => {
   const socialLinks = [
@@ -15,6 +15,13 @@ const Hero = () => {
     },
   ];
 
+  const techStack = [
+    { icon: SiReact, name: "React", color: "#61DAFB" },
+    { icon: SiNextdotjs, name: "Next.js", color: "#f2f2f2" },
+    { icon: SiNodedotjs, name: "Node.js", color: "#339933" },
+    { icon: SiOpenai, name: "OpenAI", color: "#10A37F" },
+  ];
+
   const scrollToProjects = () => {
     const projectsSection = document.getElementById("projects");
     projectsSection?.scrollIntoView({ behavior: "smooth" });
@@ -23,7 +30,7 @@ const Hero = () => {
   return (
     <section
       id="about"
-      className="relative min-h-screen pt-8 md:pt-12 flex items-start px-6 md:px-12 lg:px-20 overflow-hidden bg-gradient-to-br from-[#282830] via-[#2d2d38] to-[#282830]"
+      className="relative min-h-screen pt-6 md:pt-12 flex items-center px-6 md:px-12 lg:px-20 overflow-hidden bg-gradient-to-br from-[#282830] via-[#2d2d38] to-[#282830]"
     >
       {/* Animated grid background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -107,36 +114,48 @@ const Hero = () => {
         ))}
       </motion.div>
 
-  <div className="relative z-10 w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
+      <div className="relative z-10 w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         {/* Left side - Enhanced text content */}
-  <div className="flex flex-col gap-6 md:gap-8 justify-start mt-16 md:mt-20">
+        <div className="flex flex-col gap-6 md:gap-8 justify-center">
           <div className="flex flex-col gap-4">
             <motion.h1
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-              className="text-5xl md:text-6xl lg:text-7xl italic text-[#bb852b] leading-tight mb-2"
+              className="-mt-2 mb-4 text-5xl md:-mt-3 md:mb-6 md:text-6xl lg:text-7xl italic text-[#bb852b] leading-tight whitespace-nowrap"
               style={{ fontFamily: "var(--font-dancing-script)" }}
             >
-              Hello, I'm Sefina Kamile
+              Hello, I&apos;m Sefina Kamile
             </motion.h1>
 
             <motion.h2
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#f2f2f2] tracking-tight drop-shadow-[0_0_20px_rgba(187,133,43,0.3)]"
+              className="mt-2 text-3xl md:mt-3 md:text-4xl lg:text-5xl font-bold text-[#f2f2f2] tracking-tight drop-shadow-[0_0_20px_rgba(187,133,43,0.3)]"
             >
-              Full-stack engineer
+              Software Engineer
             </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.9, delay: 1.0, ease: "easeOut" }}
+              className="mt-2 text-lg md:mt-3 md:text-xl text-[#f2f2f2] tracking-tight"
+            >
+              Specializing in Full-Stack Development &{" "}
+              <span style={{ color: "#bb852b" }}>AI Solutions</span>
+            </motion.p>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: 1.4, ease: "easeOut" }}
               className="text-lg md:text-xl text-[#a0a0a0] leading-relaxed max-w-xl"
             >
-              I enjoy transforming ideas into scalable, user-driven web applications. My work bridges design and backend logic to create seamless, impactful digital experiences
+              I build scalable full-stack applications and AI-powered solutions
+              with a focus on performance, clean architecture, and intuitive
+              user experiences.
             </motion.p>
           </div>
 
@@ -145,7 +164,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
-            className="flex flex-wrap gap-4 items-center mt-4"
+            className="flex flex-wrap gap-4 items-center"
           >
             <Button
               onClick={scrollToProjects}
@@ -171,10 +190,137 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        {/* Right side - Hero visual component (nudge down slightly) */}
-        <div className="mt-2 lg:mt-14">
-          <HeroRightSide />
-        </div>
+        {/* Right side - Animated tech stack showcase */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="relative hidden lg:flex items-center justify-start"
+        >
+          <div className="relative w-full max-w-lg h-[500px] ml-12">
+            {/* Central glowing core */}
+            <motion.div
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-[#bb852b]/20 blur-3xl"
+              animate={{
+                scale: [1, 1.3, 1],
+                opacity: [0.3, 0.6, 0.3],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Number.POSITIVE_INFINITY,
+                ease: "easeInOut",
+              }}
+            />
+
+            {/* Orbiting tech stack icons */}
+            {techStack.map((tech, index) => {
+              const angle = (index * 360) / techStack.length;
+              const radius = 140;
+
+              return (
+                <motion.div
+                  key={tech.name}
+                  className="absolute top-1/2 left-1/2"
+                  style={{
+                    x: "-50%",
+                    y: "-50%",
+                  }}
+                  animate={{
+                    rotate: [angle, angle + 360],
+                  }}
+                  transition={{
+                    duration: 20,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "linear",
+                  }}
+                >
+                  <motion.div
+                    style={{
+                      x: radius,
+                    }}
+                    animate={{
+                      rotate: [0, -360],
+                    }}
+                    transition={{
+                      duration: 20,
+                      repeat: Number.POSITIVE_INFINITY,
+                      ease: "linear",
+                    }}
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.2 }}
+                      className="relative group cursor-pointer"
+                    >
+                      <div className="p-5 bg-[#373543]/80 backdrop-blur-md rounded-2xl border border-[#53402a]/40 group-hover:border-[#bb852b] transition-all duration-300">
+                        <tech.icon
+                          className="w-12 h-12"
+                          style={{ color: tech.color }}
+                        />
+                      </div>
+                      <motion.div
+                        className="absolute inset-0 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300"
+                        style={{ backgroundColor: tech.color }}
+                      />
+                      <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span
+                          className="text-sm font-medium"
+                          style={{ color: tech.color }}
+                        >
+                          {tech.name}
+                        </span>
+                      </div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+              );
+            })}
+
+            {/* Center text */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 1.5 }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center"
+            >
+              <div className="mb-2 text-xl font-bold text-[#f2f2f2] md:text-2xl">
+                Full-Stack Solutions
+              </div>
+              <div className="text-sm text-[#a0a0a0]">
+                Frontend • Backend • AI
+              </div>
+            </motion.div>
+
+            {/* Floating particles - deterministic positions to avoid SSR/CSR mismatch */}
+            {Array.from({ length: 12 }).map((_, i) => {
+              const left = `${(Math.abs(Math.sin(i * 12.9898)) * 100).toFixed(
+                6
+              )}%`;
+              const top = `${(Math.abs(Math.cos(i * 78.233)) * 100).toFixed(
+                6
+              )}%`;
+              const duration = 3 + Math.abs(Math.sin(i * 39.258)) * 2;
+              const delay = Math.abs(Math.sin(i * 7.356)) * 2;
+
+              return (
+                <motion.div
+                  key={i}
+                  className="absolute w-1 h-1 bg-[#bb852b] rounded-full"
+                  style={{ left, top }}
+                  animate={{
+                    y: [0, -30, 0],
+                    opacity: [0, 1, 0],
+                  }}
+                  transition={{
+                    duration,
+                    repeat: Number.POSITIVE_INFINITY,
+                    delay,
+                    ease: "easeInOut",
+                  }}
+                />
+              );
+            })}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

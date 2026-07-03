@@ -1,6 +1,15 @@
-import { NextResponse } from 'next/server'
+import { readFile } from "fs/promises"
+import path from "path"
+import { NextResponse } from "next/server"
 
-export function GET() {
-  // Return no content to prevent Next from serving the default favicon
-  return new NextResponse(null, { status: 204 })
+export async function GET() {
+  const icon = await readFile(path.join(process.cwd(), "public", "icon-s.svg"))
+
+  return new NextResponse(icon, {
+    status: 200,
+    headers: {
+      "Content-Type": "image/svg+xml",
+      "Cache-Control": "public, max-age=31536000, immutable",
+    },
+  })
 }

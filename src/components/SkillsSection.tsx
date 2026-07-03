@@ -10,91 +10,95 @@ interface Skill {
   brandColor: string
 }
 
-const skills: Skill[] = [
-  // Frontend
-  {
-    name: "React.js",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    brandColor: "#61DAFB",
-  },
-  {
-    name: "Next.js",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
-    brandColor: "#000000",
-  },
-  {
-    name: "Tailwind CSS",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-    brandColor: "#06B6D4",
-  },
-  // Backend
-  {
-    name: "Node.js",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-    brandColor: "#339933",
-  },
-  {
-    name: "Express",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
-    brandColor: "#000000",
-  },
-  {
-    name: "Laravel",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
-    brandColor: "#FF2D20",
-  },
-  // Database
-  {
-    name: "MongoDB",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
-    brandColor: "#13AA52",
-  },
-  {
-    name: "PostgreSQL",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
-    brandColor: "#336791",
-  },
-  {
-    name: "MySQL",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
-    brandColor: "#00758F",
-  },
-  // Programming Languages
-  {
-    name: "JavaScript",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-    brandColor: "#F7DF1E",
-  },
-  {
-    name: "TypeScript",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
-    brandColor: "#3178C6",
-  },
-  {
-    name: "Python",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-    brandColor: "#3776AB",
-  },
-  {
-    name: "C++",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
-    brandColor: "#00599C",
-  },
-  {
-    name: "Java",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
-    brandColor: "#007396",
-  },
-  {
-    name: "GraphQL",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg",
-    brandColor: "#E10098",
-  },
-  {
-    name: "Docker",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
-    brandColor: "#2496ED",
-  },
+const skillRows: Skill[][] = [
+  [
+    {
+      name: "React",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      brandColor: "#61DAFB",
+    },
+    {
+      name: "Next.js",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      brandColor: "#f2f2f2",
+    },
+    {
+      name: "Node.js",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+      brandColor: "#339933",
+    },
+    {
+      name: "OpenAI",
+      logo: "https://cdn.simpleicons.org/openai/10A37F",
+      brandColor: "#10A37F",
+    },
+  ],
+  [
+    {
+      name: "Gemini",
+      logo: "https://cdn.simpleicons.org/googlegemini/8E75B2",
+      brandColor: "#8E75B2",
+    },
+    {
+      name: "TypeScript",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      brandColor: "#3178C6",
+    },
+    {
+      name: "PostgreSQL",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+      brandColor: "#336791",
+    },
+    {
+      name: "MongoDB",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+      brandColor: "#13AA52",
+    },
+  ],
+  [
+    {
+      name: "Express",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+      brandColor: "#f2f2f2",
+    },
+    {
+      name: "GraphQL",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg",
+      brandColor: "#E10098",
+    },
+    {
+      name: "Python",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+      brandColor: "#3776AB",
+    },
+    {
+      name: "JavaScript",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+      brandColor: "#F7DF1E",
+    },
+  ],
+  [
+    {
+      name: "Docker",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+      brandColor: "#2496ED",
+    },
+    {
+      name: "Tailwind CSS",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      brandColor: "#06B6D4",
+    },
+    {
+      name: "Java",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+      brandColor: "#007396",
+    },
+    {
+      name: "MySQL",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+      brandColor: "#00758F",
+    },
+  ],
 ]
 
 const SkillCard = ({ skill, index }: { skill: Skill; index: number }) => {
@@ -134,6 +138,7 @@ const SkillCard = ({ skill, index }: { skill: Skill; index: number }) => {
               src={skill.logo || "/placeholder.svg"}
               alt={skill.name}
               fill
+              unoptimized
               className="object-contain"
               style={{ filter: isHovered ? `drop-shadow(0 0 8px ${skill.brandColor})` : "none" }}
             />
@@ -167,9 +172,20 @@ export default function SkillsSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-          {skills.map((skill, index) => (
-            <SkillCard key={skill.name} skill={skill} index={index} />
+        <div className="flex flex-col gap-4 md:gap-6">
+          {skillRows.map((row, rowIndex) => (
+            <div
+              key={rowIndex}
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+            >
+              {row.map((skill, index) => (
+                <SkillCard
+                  key={skill.name}
+                  skill={skill}
+                  index={rowIndex * 4 + index}
+                />
+              ))}
+            </div>
           ))}
         </div>
       </div>

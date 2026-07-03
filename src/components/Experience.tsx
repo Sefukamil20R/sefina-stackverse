@@ -6,6 +6,22 @@ import { useState } from "react"
 
 const experiences = [
   {
+    company: "Fayida Academy Educational Consultancy",
+    role: "Frontend Engineer",
+    description:
+      "Contributing to the development of an AI-powered digital tutoring platform, building and maintaining Next.js web applications with responsive user interfaces and seamless backend integrations. Collaborating with cross-functional teams to deliver scalable features that enhance learning experiences and improve platform usability.",
+    icon: Building2,
+    certificateUrl: null,
+  },
+  {
+    company: "friDATAi",
+    role: "Frontend Developer",
+    description:
+      "Contributed to the development of modern web applications for diverse industries, building responsive user interfaces, integrating backend APIs, and collaborating with cross-functional teams. Focused on delivering scalable, maintainable, and user-centered frontend solutions while following modern development practices.",
+    icon: Building2,
+    certificateUrl: null,
+  },
+  {
     company: "Eskalate",
     role: "Software Engineer",
     description:

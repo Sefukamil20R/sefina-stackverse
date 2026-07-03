@@ -3,6 +3,8 @@
 import { motion } from "framer-motion"
 
 const companies = [
+  { name: "Fayida Academy", logo: "/logos/fayda.png" },
+  { name: "friDATAi", logo: "/logos/afridatai.jpg" },
   { name: "Safaricom", logo: "/logos/safaricom-logo.png" },
   { name: "Gebeya", logo: "/logos/GebeyaLogo.png" },
   { name: "Ethioware", logo: "/logos/EthiowareLogo.png" },

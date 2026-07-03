@@ -68,7 +68,7 @@ export default function Footer() {
             }}
             className="text-lg font-light text-[#f2f2f2] tracking-wide"
           >
-            © 2025 Sefina Kamile. All rights reserved.
+            © {new Date().getFullYear()} Sefina Kamile. All rights reserved.
           </motion.p>
         </motion.div>
       </div>
