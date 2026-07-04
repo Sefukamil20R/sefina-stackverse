@@ -54,11 +54,14 @@ export default function Contact() {
       const gotcha = (formRef.current?.querySelector('input[name="_gotcha"]') as HTMLInputElement | null)?.value || ''
 
       // Post directly to Formspree
-      const response = await fetch(process.env.NEXT_PUBLIC_CONTACT_ENDPOINT!, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ ...formData, _gotcha: gotcha, _next: window.location.href }),
-      })
+      const response = await fetch(
+        process.env.NEXT_PUBLIC_CONTACT_ENDPOINT ?? "https://formspree.io/f/xqagkkon",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({ ...formData, _gotcha: gotcha, _next: window.location.href }),
+        }
+      )
 
       if (response.ok) {
         setSubmitStatus('success')

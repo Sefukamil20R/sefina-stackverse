@@ -29,14 +29,14 @@ const skillRows: Skill[][] = [
     },
     {
       name: "OpenAI",
-      logo: "https://cdn.simpleicons.org/openai/10A37F",
+      logo: "/icons/openai.svg",
       brandColor: "#10A37F",
     },
   ],
   [
     {
       name: "Gemini",
-      logo: "https://cdn.simpleicons.org/googlegemini/8E75B2",
+      logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v11.14.0/icons/googlegemini.svg",
       brandColor: "#8E75B2",
     },
     {

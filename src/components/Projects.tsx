@@ -3,7 +3,6 @@
 import type React from "react"
 
 import { motion } from "framer-motion"
-import { Github } from "lucide-react"
 import {
   SiReact,
   SiNextdotjs,
@@ -11,10 +10,11 @@ import {
   SiLaravel,
   SiPhp,
   SiJavascript,
-  SiFirebase,
   SiNodedotjs,
-  SiCss3,
   SiBootstrap,
+  SiTypescript,
+  SiSquarespace,
+  SiTailwindcss,
 } from "react-icons/si"
 
 interface Project {
@@ -22,29 +22,65 @@ interface Project {
   name: string
   description: string
   mockupImage: string
-  type: "Frontend" | "Backend" | "Fullstack"
+  type: "Frontend" | "Backend" | "Fullstack" | "Website"
   frameworks: string[]
   frameworkIcons: React.ReactNode[]
   githubLink?: string
+  liveLink?: string
+  isLive?: boolean
   isOpenSource?: boolean
 }
 
-const projects: Project[] = [
+const liveProjects: Project[] = [
   {
-    id: 1,
-    name: "MaledaHandcraft Ecommerce",
+    id: 101,
+    name: "Fayda Academy",
     description:
-      "Full-featured ecommerce platform for handcrafted products with secure payment processing and inventory management",
-    mockupImage: "/Screenshoot/MaledaHandcraft.png",
-    type: "Fullstack",
-    frameworks: ["JavaScript", "CSS5", "PHP"],
+      "A modern digital learning platform helping high school students master subjects through interactive courses, video lessons, quizzes, notes, and national exam preparation powered by an intuitive learning experience.",
+    mockupImage: "/Screenshoot/fayda.png",
+    type: "Frontend",
+    frameworks: ["Next.js", "TypeScript", "Tailwind CSS"],
     frameworkIcons: [
-      <SiJavascript key="js" className="w-6 h-6 text-yellow-400" />,
-      <SiCss3 key="css" className="w-6 h-6 text-blue-500" />,
-      <SiPhp key="php" className="w-6 h-6 text-purple-500" />,
+      <SiNextdotjs key="next" className="w-6 h-6 text-white" />,
+      <SiTypescript key="ts" className="w-6 h-6 text-blue-500" />,
+      <SiTailwindcss key="tailwind" className="w-6 h-6 text-cyan-400" />,
     ],
-    githubLink: "https://github.com/Sefukamil20R/maleda-ecommerce-backend",
+    liveLink: "https://www.fayidaacademy.com/",
+    isLive: true,
   },
+  {
+    id: 102,
+    name: "Aman Clinic Management System",
+    description:
+      "A comprehensive clinic management system that streamlines patient care through role-based workflows for doctors, nurses, laboratory staff, receptionists, and administrators, from triage to treatment.",
+    mockupImage: "/Screenshoot/clinic.png",
+    type: "Frontend",
+    frameworks: ["React.js", "TypeScript", "Tailwind CSS"],
+    frameworkIcons: [
+      <SiReact key="react" className="w-6 h-6 text-cyan-400" />,
+      <SiTypescript key="ts" className="w-6 h-6 text-blue-500" />,
+      <SiTailwindcss key="tailwind" className="w-6 h-6 text-cyan-400" />,
+    ],
+    liveLink: "https://clinic-front-e6bi.vercel.app/dash",
+    isLive: true,
+  },
+  {
+    id: 103,
+    name: "TechBridge Academy",
+    description:
+      "A professional company website showcasing TechBridge Academy's services, programs, and mission with a modern, responsive design focused on brand identity and user engagement.",
+    mockupImage: "/Screenshoot/techbridge.png",
+    type: "Website",
+    frameworks: ["Squarespace"],
+    frameworkIcons: [
+      <SiSquarespace key="sq" className="w-6 h-6 text-white" />,
+    ],
+    liveLink: "https://www.techbridgeac.com/",
+    isLive: true,
+  },
+]
+
+const legacyProjects: Project[] = [
   {
     id: 2,
     name: "ChainGuard",
@@ -66,34 +102,49 @@ const projects: Project[] = [
     githubLink: "https://github.com/Sefukamil20R/ChainGuard",
   },
   {
-    id: 3,
-    name: "Streamly",
+    id: 1,
+    name: "MaledaHandcraft Ecommerce",
     description:
-      "Netflix-inspired movie streaming application with personalized recommendations, watchlist management, and smooth video playback",
-    mockupImage: "/Screenshoot/NetflixStreamly.png",
-    type: "Frontend",
-    frameworks: ["React.js", "CSS5"],
+      "Full-featured ecommerce platform for handcrafted products with secure payment processing and inventory management",
+    mockupImage: "/Screenshoot/MaledaHandcraft.png",
+    type: "Fullstack",
+    frameworks: ["JavaScript", "Tailwind CSS", "PHP"],
     frameworkIcons: [
-      <SiReact key="react" className="w-6 h-6 text-cyan-400" />,
-      <SiCss3 key="css" className="w-6 h-6 text-blue-500" />,
+      <SiJavascript key="js" className="w-6 h-6 text-yellow-400" />,
+      <SiTailwindcss key="tailwind" className="w-6 h-6 text-cyan-400" />,
+      <SiPhp key="php" className="w-6 h-6 text-purple-500" />,
     ],
-    githubLink: "https://github.com/Sefukamil20R/Streamly",
+    githubLink: "https://github.com/Sefukamil20R/maleda-ecommerce-backend",
   },
-  {
-    id: 4,
-    name: "Ecometrix",
-    description:
-      "Amazon-like e-commerce platform with advanced product filtering, real-time inventory, secure checkout, and order tracking",
-    mockupImage: "/Screenshoot/Ecometrix.png",
-    type: "Frontend",
-    frameworks: ["React.js", "Firebase", "CSS5"],
-    frameworkIcons: [
-      <SiReact key="react" className="w-6 h-6 text-cyan-400" />,
-      <SiFirebase key="firebase" className="w-6 h-6 text-yellow-500" />,
-      <SiCss3 key="css" className="w-6 h-6 text-blue-500" />,
-    ],
-    githubLink: "https://github.com/Sefukamil20R/Ecometrix",
-  },
+  // {
+  //   id: 3,
+  //   name: "Streamly",
+  //   description:
+  //     "Netflix-inspired movie streaming application with personalized recommendations, watchlist management, and smooth video playback",
+  //   mockupImage: "/Screenshoot/NetflixStreamly.png",
+  //   type: "Frontend",
+  //   frameworks: ["React.js", "CSS5"],
+  //   frameworkIcons: [
+  //     <SiReact key="react" className="w-6 h-6 text-cyan-400" />,
+  //     <SiCss3 key="css" className="w-6 h-6 text-blue-500" />,
+  //   ],
+  //   githubLink: "https://github.com/Sefukamil20R/Streamly",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Ecometrix",
+  //   description:
+  //     "Amazon-like e-commerce platform with advanced product filtering, real-time inventory, secure checkout, and order tracking",
+  //   mockupImage: "/Screenshoot/Ecometrix.png",
+  //   type: "Frontend",
+  //   frameworks: ["React.js", "Firebase", "CSS5"],
+  //   frameworkIcons: [
+  //     <SiReact key="react" className="w-6 h-6 text-cyan-400" />,
+  //     <SiFirebase key="firebase" className="w-6 h-6 text-yellow-500" />,
+  //     <SiCss3 key="css" className="w-6 h-6 text-blue-500" />,
+  //   ],
+  //   githubLink: "https://github.com/Sefukamil20R/Ecometrix",
+  // },
   {
     id: 5,
     name: "InterTechHub",
@@ -101,16 +152,11 @@ const projects: Project[] = [
       "Comprehensive intern management system for tracking internships, submissions, resources, and performance with real-time notifications",
     mockupImage: "/Screenshoot/Intertechub_intern_Management_App.png",
     type: "Frontend",
-    frameworks: ["React.js", "CSS5", "REST API"],
+    frameworks: ["React.js", "Tailwind CSS", "JavaScript"],
     frameworkIcons: [
       <SiReact key="react" className="w-6 h-6 text-cyan-400" />,
-      <SiCss3 key="css" className="w-6 h-6 text-blue-500" />,
-      <div
-        key="api"
-        className="w-6 h-6 bg-green-500 rounded text-white text-xs flex items-center justify-center font-bold"
-      >
-        API
-      </div>,
+      <SiTailwindcss key="tailwind" className="w-6 h-6 text-cyan-400" />,
+      <SiJavascript key="js" className="w-6 h-6 text-yellow-400" />,
     ],
     githubLink: "https://github.com/Sefukamil20R/Intertechub_intern_Management_App",
   },
@@ -151,16 +197,18 @@ const projects: Project[] = [
       "Event management and movie ticket booking system with seat selection, payment integration, and digital ticket delivery",
     mockupImage: "/ticketify-mockup.jpg",
     type: "Frontend",
-    frameworks: ["React.js", "JavaScript", "CSS5"],
+    frameworks: ["React.js", "JavaScript", "Tailwind CSS"],
     frameworkIcons: [
       <SiReact key="react" className="w-6 h-6 text-cyan-400" />,
       <SiJavascript key="js" className="w-6 h-6 text-yellow-400" />,
-      <SiCss3 key="css" className="w-6 h-6 text-blue-500" />,
+      <SiTailwindcss key="tailwind" className="w-6 h-6 text-cyan-400" />,
     ],
     githubLink: "https://github.com/Sefukamil20R/Movie-Ticket-Booking",
     isOpenSource: true,
   },
 ]
+
+const projects: Project[] = [...liveProjects, ...legacyProjects]
 
 const containerVariants: any = {
   hidden: { opacity: 0 },
@@ -219,6 +267,8 @@ const getTypeBadgeColor = (type: string) => {
       return "bg-purple-500/20 text-purple-400 border-purple-500/30"
     case "Fullstack":
       return "bg-green-500/20 text-green-400 border-green-500/30"
+    case "Website":
+      return "bg-blue-500/20 text-blue-400 border-blue-500/30"
     default:
       return "bg-gray-500/20 text-gray-400 border-gray-500/30"
   }
@@ -338,8 +388,16 @@ export default function Projects() {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12"
         >
-          {projects.map((project) => (
-            <motion.div key={project.id} variants={itemVariants} className="group">
+          {projects.map((project, index) => {
+            const isLastAlone =
+              projects.length % 2 !== 0 && index === projects.length - 1
+
+            return (
+            <motion.div
+              key={project.id}
+              variants={itemVariants}
+              className={`group ${isLastAlone ? "md:col-span-2 md:max-w-xl md:mx-auto md:w-full" : ""}`}
+            >
               <motion.div
                 whileHover={hoverVariants.hover}
                 className="bg-[#373543] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
@@ -392,19 +450,26 @@ export default function Projects() {
                 </motion.div>
 
                 {/* Content */}
-                <div className="p-6 md:p-8">
-                  <div className="flex items-start justify-between gap-3 mb-3">
-                    <h3 className="text-2xl font-bold text-white flex-1">{project.name}</h3>
+                <div className="p-6 md:p-8 relative">
+                  {project.isLive && (
+                    <span className="absolute top-4 right-4 md:top-6 md:right-6 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-green-500/20 text-green-400 border border-green-500/30">
+                      <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                      Live
+                    </span>
+                  )}
+
+                  <div className="mb-3 pr-16">
+                    <h3 className="text-2xl font-bold text-white">{project.name}</h3>
                     <span
-                      className={`px-3 py-1 rounded-full text-xs font-semibold border whitespace-nowrap ${getTypeBadgeColor(project.type)}`}
+                      className={`inline-block mt-2 px-3 py-1 rounded-full text-xs font-semibold border ${getTypeBadgeColor(project.type)}`}
                     >
                       {project.type}
                     </span>
                   </div>
 
-                  <p className="text-gray-400 text-sm md:text-base mb-4 line-clamp-2">{project.description}</p>
+                  <p className="text-gray-400 text-sm md:text-base mb-4 line-clamp-3">{project.description}</p>
 
-                  <div className="flex items-center justify-between gap-4">
+                  <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
                     <div className="flex items-center gap-2 flex-wrap">
                       {project.frameworkIcons.map((icon, idx) => (
                         <div key={idx} className="flex items-center justify-center">
@@ -413,16 +478,24 @@ export default function Projects() {
                       ))}
                     </div>
 
-                    <div className="flex items-center gap-2">
-                      {project.githubLink ? (
+                    <div className="flex items-center gap-2 shrink-0">
+                      {project.liveLink ? (
+                        <a
+                          href={project.liveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-[#bb852b] hover:bg-[#a67a24] text-[#282830] text-sm font-semibold transition-colors duration-200 whitespace-nowrap"
+                        >
+                          Visit Live Site
+                        </a>
+                      ) : project.githubLink ? (
                         <a
                           href={project.githubLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#bb852b] hover:bg-[#a67a24] text-white transition-colors duration-200 group/icon"
-                          title="View on GitHub"
+                          className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-[#bb852b] hover:bg-[#a67a24] text-[#282830] text-sm font-semibold transition-colors duration-200 whitespace-nowrap"
                         >
-                          <Github size={20} />
+                          View Code
                         </a>
                       ) : null}
                       {project.isOpenSource && (
@@ -433,7 +506,8 @@ export default function Projects() {
                 </div>
               </motion.div>
             </motion.div>
-          ))}
+            )
+          })}
         </motion.div>
       </div>
     </section>

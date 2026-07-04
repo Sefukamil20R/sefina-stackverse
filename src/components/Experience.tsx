@@ -14,11 +14,19 @@ const experiences = [
     certificateUrl: null,
   },
   {
-    company: "friDATAi",
+    company: "AfriDatai",
     role: "Frontend Developer",
     description:
       "Contributed to the development of modern web applications for diverse industries, building responsive user interfaces, integrating backend APIs, and collaborating with cross-functional teams. Focused on delivering scalable, maintainable, and user-centered frontend solutions while following modern development practices.",
     icon: Building2,
+    certificateUrl: null,
+  },
+  {
+    company: "Qismati (Orozones LLC, U.S.)",
+    role: "Software Engineer & Product Associate (Freelance)",
+    description:
+      "Contributed to the development and successful release of the Qismati platform by collaborating across product, engineering, and QA teams. Improved application quality through feature refinement, bug fixing, performance optimization, and user experience enhancements. Managed production releases using Google Play Console and helped ensure reliable deployment throughout the product lifecycle.",
+    icon: Briefcase,
     certificateUrl: null,
   },
   {
@@ -30,14 +38,6 @@ const experiences = [
     certificateUrl: null,
   },
   {
-    company: "InterTechub",
-    role: "Frontend Developer",
-    description:
-      "Built and integrated responsive front-end interfaces with RESTful APIs, ensuring seamless data flow and improved user interactivity. Focused on crafting clean, maintainable UI components using modern frameworks and tools.",
-    icon: Building2,
-    certificateUrl: "/Intertech_Front.pdf",
-  },
-  {
     company: "Ethioware - EdTech Initiative",
     role: "Backend Developer Intern",
     description:
@@ -46,12 +46,12 @@ const experiences = [
     certificateUrl: "/Ethioware_Backend.png",
   },
   {
-    company: "Qismati (Orozones LLC, U.S.)",
-    role: "Mobile App Developer & Product Associate (Freelance)",
+    company: "InterTechub",
+    role: "Frontend Development Intern",
     description:
-      "Collaborated remotely on the Qismati Islamic wedding app, combining product insight with technical execution. Worked closely with testers during the closed beta phase to resolve issues, enhance performance, and refine the user journey. Contributed to release management and deployment through Google Play Console, ensuring a smooth and reliable publishing process.",
-    icon: Briefcase,
-    certificateUrl: null,
+      "Built and integrated responsive front-end interfaces with RESTful APIs, ensuring seamless data flow and improved user interactivity. Focused on crafting clean, maintainable UI components using modern frameworks and tools.",
+    icon: Building2,
+    certificateUrl: "/Intertech_Front.pdf",
   },
   {
     company: "Google Developer Group (GDG)",

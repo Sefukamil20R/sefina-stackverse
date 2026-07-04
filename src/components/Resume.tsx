@@ -49,7 +49,7 @@ export default function Resume() {
         {/* Download Resume Button */}
         <motion.div variants={itemVariants}>
           <a
-            href="/Sefina-Kamile-Abrar-Resume-F.pdf"
+            href="/Sefina_Kamile_Full_Stack_W_Resume.pdf"
             download
             className="inline-flex items-center gap-3 px-8 py-4 bg-[#bb852b] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-[#bb852b]/50 group relative overflow-hidden"
           >
