@@ -30,7 +30,7 @@ const Hero = () => {
   return (
     <section
       id="about"
-      className="relative min-h-screen pt-6 md:pt-12 flex items-center px-6 md:px-12 lg:px-20 overflow-hidden bg-gradient-to-br from-[#282830] via-[#2d2d38] to-[#282830]"
+      className="relative min-h-screen pt-24 pb-12 md:pt-12 md:pb-0 flex items-center px-6 md:px-12 lg:px-20 overflow-hidden bg-gradient-to-br from-[#282830] via-[#2d2d38] to-[#282830]"
     >
       {/* Animated grid background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -122,7 +122,7 @@ const Hero = () => {
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-              className="-mt-2 mb-4 text-5xl md:-mt-3 md:mb-6 md:text-6xl lg:text-7xl italic text-[#bb852b] leading-tight whitespace-nowrap"
+              className="-mt-2 mb-4 text-4xl sm:text-5xl md:-mt-3 md:mb-6 md:text-6xl lg:text-7xl italic text-[#bb852b] leading-tight whitespace-normal md:whitespace-nowrap"
               style={{ fontFamily: "var(--font-dancing-script)" }}
             >
               Hello, I&apos;m Sefina Kamile
